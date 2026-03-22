@@ -380,7 +380,7 @@ function App() {
                   <Phone className="w-6 h-6 text-yellow-500" />
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-gray-300">+1 (555) 123-4567</div>
+                    <div className="text-gray-300">+19038908932</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -492,7 +492,7 @@ function App() {
             <div>
               <h4 className="font-semibold text-yellow-500 mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>+1 (555) 123-4567</li>
+                <li>+19038908932</li>
                 <li>info@swdesigns.com</li>
                 <li>123 Mining District</li>
                 <li>Engineering City, EC 12345</li>
