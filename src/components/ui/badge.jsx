@@ -1,1 +1,8 @@
-import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Badge({ className, ...props }) {\n  return <div className={cn(\"inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors\", className)} {...props} />\n}\n\nexport { Badge }\n
+import * as React from "react"
+import { cn } from "@/lib/utils"
+
+function Badge({ className, ...props }) {
+  return <div className={cn("inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors", className)} {...props} />
+}
+
+export { Badge }
