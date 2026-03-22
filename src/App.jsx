@@ -26,19 +26,16 @@ function App() {
 
   const featuredImages = [
     {
-      src: '/images/mining-pipeline.jpg',
-      alt: 'Mining pipeline infrastructure at an industrial site',
-      label: 'Infrastructure Systems'
+      src: '/images/open-pit-mine.jpg',
+      alt: 'Large open pit mine showing terraced excavation roads'
     },
     {
       src: '/images/mining-team.jpg',
-      alt: 'Mining engineers reviewing operations on site',
-      label: 'Field Engineering Team'
+      alt: 'Mining engineers reviewing operations on site'
     },
     {
-      src: '/images/open-pit-mine.jpg',
-      alt: 'Large open pit mine showing terraced excavation roads',
-      label: 'Open Pit Mine Planning'
+      src: '/images/mining-pipeline.jpg',
+      alt: 'Mining pipeline infrastructure at an industrial site'
     }
   ]
 
@@ -120,10 +117,6 @@ function App() {
                   alt={featuredImages[0].alt}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3">
-                  <p className="text-yellow-500 font-semibold text-lg">{featuredImages[0].label}</p>
-                  <p className="text-gray-200">Excellence in Every Project</p>
-                </div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-yellow-500 text-black p-4 rounded-lg">
                 <div className="flex items-center space-x-2">
@@ -273,26 +266,6 @@ function App() {
                 </ul>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Gallery */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Project Highlights</h2>
-            <p className="text-lg text-gray-300">A look at the kind of mining and engineering environments we support.</p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {featuredImages.map((image) => (
-              <div key={image.src} className="rounded-xl overflow-hidden border border-yellow-500/20 bg-gray-900">
-                <img src={image.src} alt={image.alt} className="h-56 w-full object-cover" />
-                <div className="px-4 py-3">
-                  <p className="text-yellow-500 font-semibold">{image.label}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
