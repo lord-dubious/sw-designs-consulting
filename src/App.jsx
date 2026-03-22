@@ -64,9 +64,9 @@ function App() {
               <a href="#process" className="hover:text-yellow-500 transition-colors">PROCESS</a>
               <a href="#contact" className="hover:text-yellow-500 transition-colors">CONTACT</a>
             </div>
-            <Button className="bg-yellow-500 text-black hover:bg-yellow-400 hover-glow">
+            <a href="#contact" className="inline-flex items-center justify-center rounded-md h-9 px-4 py-2 text-sm font-medium bg-yellow-500 text-black hover:bg-yellow-400 hover-glow">
               Free Consultation
-            </Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -87,13 +87,13 @@ function App() {
                 With over 25 years of experience, we transform complex challenges into successful projects.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-yellow-500 text-black hover:bg-yellow-400 hover-glow">
+                <a href="#contact" className="inline-flex items-center justify-center rounded-md h-10 px-8 text-sm font-medium bg-yellow-500 text-black hover:bg-yellow-400 hover-glow">
                   Start Your Project
                   <ChevronRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black">
+                </a>
+                <a href="#services" className="inline-flex items-center justify-center rounded-md h-10 px-8 text-sm font-medium border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black">
                   View Our Work
-                </Button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -357,18 +357,60 @@ function App() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400 w-full" />
-                    <input type="text" placeholder="Last Name" className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400 w-full" />
+                <form
+                  name="consultation"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  action="/success"
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="consultation" />
+                  <p className="hidden">
+                    <label>
+                      Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                  </p>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First Name"
+                      required
+                      className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400 w-full"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last Name"
+                      required
+                      className="bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400 w-full"
+                    />
                   </div>
-                  <input type="email" placeholder="Email Address" className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400" />
-                  <input type="tel" placeholder="Phone Number" className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400" />
-                  <textarea placeholder="Project Description" rows={4} className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400"></textarea>
-                  <Button className="w-full bg-yellow-500 text-black hover:bg-yellow-400 hover-glow">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400"
+                  />
+                  <textarea
+                    name="projectDescription"
+                    placeholder="Project Description"
+                    rows={4}
+                    required
+                    className="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400"
+                  ></textarea>
+                  <Button type="submit" className="w-full bg-yellow-500 text-black hover:bg-yellow-400 hover-glow">
                     Send Message
                   </Button>
-                </div>
+                </form>
               </CardContent>
             </Card>
           </div>
@@ -416,7 +458,7 @@ function App() {
           </div>
           <Separator className="my-8 bg-gray-800" />
           <div className="text-center text-gray-400">
-            <p>&copy; 2024 S&amp;W Designs Consulting and Engineering Ltd. All rights reserved.</p>
+            <p>&copy; 2026 S&amp;W Designs Consulting and Engineering Ltd. All rights reserved.</p>
           </div>
         </div>
       </footer>
