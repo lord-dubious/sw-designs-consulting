@@ -1,0 +1,1 @@
+# S&W Designs Consulting and Engineering Ltd\n\nCompany website built with React + Vite + Tailwind CSS.\n\n## Setup\n\n```bash\nnpm install\nnpm run dev\n```\n\n## Deploy\n\nBuild command: `npm run build`  \nPublish directory: `dist`\n
