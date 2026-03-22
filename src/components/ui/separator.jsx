@@ -1,1 +1,19 @@
-import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nconst Separator = React.forwardRef(({ className, orientation = \"horizontal\", decorative = true, ...props }, ref) => (\n  <div\n    ref={ref}\n    decorative={decorative}\n    orientation={orientation}\n    className={cn(\n      \"shrink-0 bg-border\",\n      orientation === \"horizontal\" ? \"h-[1px] w-full\" : \"h-full w-[1px]\",\n      className\n    )}\n    {...props}\n  />\n))\nSeparator.displayName = \"Separator\"\n\nexport { Separator }\n
+import * as React from "react"
+import { cn } from "@/lib/utils"
+
+const Separator = React.forwardRef(({ className, orientation = "horizontal", decorative = true, ...props }, ref) => (
+  <div
+    ref={ref}
+    decorative={decorative}
+    orientation={orientation}
+    className={cn(
+      "shrink-0 bg-border",
+      orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+      className
+    )}
+    {...props}
+  />
+))
+Separator.displayName = "Separator"
+
+export { Separator }
